@@ -1,0 +1,1113 @@
+{
+  "metadata": {
+    "timestamp": "2026-09-07 00:41:21",
+    "num_sentences": 40,
+    "models_evaluated": [
+      "bert-base-uncased",
+      "roberta-base",
+      "gpt2",
+      "distilgpt2"
+    ],
+    "research_question": "Does representation geometry stabilization correspond to linguistic probe usability?"
+  },
+  "models": {
+    "bert-base-uncased": {
+      "model_name": "bert-base-uncased",
+      "n_layers": 12,
+      "avg_anisotropy": 0.6471081880422739,
+      "min_anisotropy_layer": 0,
+      "max_mev_layer": 9,
+      "max_svd_ratio_layer": 6,
+      "sod_layer": 5,
+      "cka_elbow_layer": 1,
+      "max_drift_layer": 1,
+      "metrics": {
+        "anisotropy_per_layer": [
+          0.5286695957183838,
+          0.53776615858078,
+          0.6133559942245483,
+          0.6543391346931458,
+          0.7215247750282288,
+          0.7402225732803345,
+          0.7458544373512268,
+          0.7333501577377319,
+          0.7218982577323914,
+          0.6596639156341553,
+          0.586411714553833,
+          0.6093231439590454,
+          0.5600265860557556
+        ],
+        "uncentered_svd_ratio_per_layer": [
+          0.5449688082014353,
+          0.5471599357475778,
+          0.6207665934196335,
+          0.6609454720323477,
+          0.7285067891641258,
+          0.7472818659898722,
+          0.7530894316169365,
+          0.7404623325158611,
+          0.7294415377518491,
+          0.6683876247155786,
+          0.597791408543296,
+          0.6209106095792135,
+          0.5722068717534169
+        ],
+        "mev_per_layer": [
+          0.1500071883201599,
+          0.1622936725616455,
+          0.1596328467130661,
+          0.16346928477287292,
+          0.17781174182891846,
+          0.18798448145389557,
+          0.1936252862215042,
+          0.20412075519561768,
+          0.2131427675485611,
+          0.23879773914813995,
+          0.2340729683637619,
+          0.21971017122268677,
+          0.19179250299930573
+        ],
+        "layer_drift_cosine": [
+          0.3011283874511719,
+          0.12051916122436523,
+          0.07152098417282104,
+          0.06288832426071167,
+          0.0488811731338501,
+          0.03603249788284302,
+          0.048555076122283936,
+          0.042450547218322754,
+          0.062494635581970215,
+          0.09754312038421631,
+          0.08517169952392578,
+          0.19183111190795898
+        ],
+        "layer_drift_cka": [
+          0.9207944273948669,
+          0.9880509376525879,
+          0.9923408627510071,
+          0.9875444769859314,
+          0.9919297099113464,
+          0.9937692880630493,
+          0.9961078763008118,
+          0.9931179285049438,
+          0.9885283708572388,
+          0.9857658743858337,
+          0.9927282333374023,
+          0.987695038318634
+        ],
+        "self_similarity_per_layer": [
+          0.9523614446322123,
+          0.7987584074338278,
+          0.7419412533442179,
+          0.6772129336992899,
+          0.6294739246368408,
+          0.5966434677441915,
+          0.5822354157765707,
+          0.5717669725418091,
+          0.5646849274635315,
+          0.5449772477149963,
+          0.5462214748064677,
+          0.5794558525085449,
+          0.5078126589457194
+        ],
+        "silhouette_per_layer": [
+          0.10756907612085342,
+          0.2619398236274719,
+          0.2578732371330261,
+          0.25862640142440796,
+          0.2570681571960449,
+          0.2667272388935089,
+          0.2616111636161804,
+          0.2598162889480591,
+          0.28587836027145386,
+          0.30043983459472656,
+          0.3646560609340668,
+          0.36774498224258423,
+          0.36864763498306274
+        ]
+      },
+      "sod_sensitivity": {
+        "window_1": {
+          "thresh_0.20": 1,
+          "thresh_0.35": 1,
+          "thresh_0.50": 1,
+          "thresh_0.65": 1,
+          "thresh_0.80": 1,
+          "thresh_0.95": 1
+        },
+        "window_2": {
+          "thresh_0.20": 6,
+          "thresh_0.35": 5,
+          "thresh_0.50": 5,
+          "thresh_0.65": 5,
+          "thresh_0.80": 5,
+          "thresh_0.95": 3
+        },
+        "window_3": {
+          "thresh_0.20": 6,
+          "thresh_0.35": 5,
+          "thresh_0.50": 5,
+          "thresh_0.65": 5,
+          "thresh_0.80": 5,
+          "thresh_0.95": 3
+        }
+      },
+      "probing": {
+        "Part-of-Speech Tagging": {
+          "dimension": "syntactic",
+          "metric_name": "Accuracy",
+          "scores_per_layer": [
+            0.7133333333333334,
+            0.8933333333333333,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.8904761904761905
+          ],
+          "peak_layer": 2,
+          "peak_score": 1.0,
+          "plateau_layer": 2
+        },
+        "Named Entity Recognition": {
+          "dimension": "entity",
+          "metric_name": "Accuracy",
+          "scores_per_layer": [
+            0.75,
+            0.863095238095238,
+            0.863095238095238,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "peak_layer": 3,
+          "peak_score": 1.0,
+          "plateau_layer": 3
+        },
+        "Topic Classification": {
+          "dimension": "semantic",
+          "metric_name": "Macro F1",
+          "scores_per_layer": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "peak_layer": 0,
+          "peak_score": 1.0,
+          "plateau_layer": 0
+        },
+        "STS Benchmark": {
+          "dimension": "sentence_semantics",
+          "metric_name": "Spearman rho",
+          "scores_per_layer": [
+            0.756840575820406,
+            0.8373774993047057,
+            0.8569954678457531,
+            0.8332474006644853,
+            0.8693857637664147,
+            0.8755809117267455,
+            0.8683532391063595,
+            0.9117192748286748,
+            0.9416624899702734,
+            0.9509552119107694,
+            0.9179144227890056,
+            0.9230770460892811,
+            0.8704182884264696
+          ],
+          "peak_layer": 9,
+          "peak_score": 0.9509552119107694,
+          "plateau_layer": 7
+        }
+      },
+      "probing_vs_geometry_comparison": {
+        "sod_marker": 5,
+        "cka_elbow_marker": 1,
+        "max_drift_marker": 1,
+        "average_probe_plateau": 3.0,
+        "mae_sod_vs_probes": 3.0,
+        "mae_cka_vs_probes": 2.5,
+        "mae_drift_vs_probes": 2.5,
+        "detailed_comparisons": [
+          {
+            "task": "Part-of-Speech Tagging",
+            "dimension": "syntactic",
+            "probe_peak_layer": 2,
+            "probe_plateau_layer": 2,
+            "sod_layer": 5,
+            "delta_sod": -3,
+            "cka_elbow_layer": 1,
+            "delta_cka": 1,
+            "max_drift_layer": 1,
+            "delta_drift": 1
+          },
+          {
+            "task": "Named Entity Recognition",
+            "dimension": "entity",
+            "probe_peak_layer": 3,
+            "probe_plateau_layer": 3,
+            "sod_layer": 5,
+            "delta_sod": -2,
+            "cka_elbow_layer": 1,
+            "delta_cka": 2,
+            "max_drift_layer": 1,
+            "delta_drift": 2
+          },
+          {
+            "task": "Topic Classification",
+            "dimension": "semantic",
+            "probe_peak_layer": 0,
+            "probe_plateau_layer": 0,
+            "sod_layer": 5,
+            "delta_sod": -5,
+            "cka_elbow_layer": 1,
+            "delta_cka": -1,
+            "max_drift_layer": 1,
+            "delta_drift": -1
+          },
+          {
+            "task": "STS Benchmark",
+            "dimension": "sentence_semantics",
+            "probe_peak_layer": 9,
+            "probe_plateau_layer": 7,
+            "sod_layer": 5,
+            "delta_sod": 2,
+            "cka_elbow_layer": 1,
+            "delta_cka": 6,
+            "max_drift_layer": 1,
+            "delta_drift": 6
+          }
+        ]
+      }
+    },
+    "roberta-base": {
+      "model_name": "roberta-base",
+      "n_layers": 12,
+      "avg_anisotropy": 0.9364528976953946,
+      "min_anisotropy_layer": 0,
+      "max_mev_layer": 11,
+      "max_svd_ratio_layer": 7,
+      "sod_layer": 2,
+      "cka_elbow_layer": 1,
+      "max_drift_layer": 1,
+      "metrics": {
+        "anisotropy_per_layer": [
+          0.7427574992179871,
+          0.886061429977417,
+          0.9528296589851379,
+          0.9568130970001221,
+          0.9563912153244019,
+          0.9582622647285461,
+          0.9616003036499023,
+          0.9629732370376587,
+          0.9579755067825317,
+          0.95513916015625,
+          0.960915744304657,
+          0.9608343839645386,
+          0.9613341689109802
+        ],
+        "uncentered_svd_ratio_per_layer": [
+          0.7521801824062267,
+          0.8908775636561092,
+          0.9544468431768166,
+          0.9580687906075459,
+          0.9575990428369398,
+          0.9594154682036843,
+          0.9626736412059925,
+          0.963974027493462,
+          0.9591440813669337,
+          0.9563598409573563,
+          0.9619620999217932,
+          0.9618741951803319,
+          0.9623438599682073
+        ],
+        "mev_per_layer": [
+          0.1420937329530716,
+          0.1956072300672531,
+          0.1846877932548523,
+          0.17874833941459656,
+          0.18612806499004364,
+          0.19502857327461243,
+          0.20373602211475372,
+          0.21710413694381714,
+          0.2356545627117157,
+          0.2390752136707306,
+          0.25301727652549744,
+          0.27524706721305847,
+          0.2743395268917084
+        ],
+        "layer_drift_cosine": [
+          0.22327780723571777,
+          0.03500634431838989,
+          0.010143935680389404,
+          0.00979006290435791,
+          0.008961021900177002,
+          0.007491707801818848,
+          0.007096409797668457,
+          0.006765961647033691,
+          0.004915595054626465,
+          0.007454216480255127,
+          0.005829453468322754,
+          0.010891437530517578
+        ],
+        "layer_drift_cka": [
+          0.9556445479393005,
+          0.9810793399810791,
+          0.9821473956108093,
+          0.9914340376853943,
+          0.9937068223953247,
+          0.9921745657920837,
+          0.9914309978485107,
+          0.9923499226570129,
+          0.9966577291488647,
+          0.9961466789245605,
+          0.9928048849105835,
+          0.9840566515922546
+        ],
+        "self_similarity_per_layer": [
+          0.8641553322474161,
+          0.8179142077763876,
+          0.8640473882357279,
+          0.8603410919507345,
+          0.8585615158081055,
+          0.8558878501256307,
+          0.8634958863258362,
+          0.8748453458150228,
+          0.870860735575358,
+          0.8701308369636536,
+          0.8845911820729574,
+          0.8961562911669413,
+          0.9185230135917664
+        ],
+        "silhouette_per_layer": [
+          0.13155582547187805,
+          0.19639578461647034,
+          0.23254899680614471,
+          0.2577049732208252,
+          0.2667115330696106,
+          0.2645643353462219,
+          0.26166918873786926,
+          0.267009973526001,
+          0.2938428521156311,
+          0.3125127851963043,
+          0.32073280215263367,
+          0.34197068214416504,
+          0.2997299134731293
+        ]
+      },
+      "sod_sensitivity": {
+        "window_1": {
+          "thresh_0.20": 3,
+          "thresh_0.35": 3,
+          "thresh_0.50": 2,
+          "thresh_0.65": 2,
+          "thresh_0.80": 2,
+          "thresh_0.95": 2
+        },
+        "window_2": {
+          "thresh_0.20": 3,
+          "thresh_0.35": 3,
+          "thresh_0.50": 2,
+          "thresh_0.65": 2,
+          "thresh_0.80": 2,
+          "thresh_0.95": 2
+        },
+        "window_3": {
+          "thresh_0.20": 3,
+          "thresh_0.35": 3,
+          "thresh_0.50": 2,
+          "thresh_0.65": 2,
+          "thresh_0.80": 2,
+          "thresh_0.95": 2
+        }
+      },
+      "probing": {
+        "Part-of-Speech Tagging": {
+          "dimension": "syntactic",
+          "metric_name": "Accuracy",
+          "scores_per_layer": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "peak_layer": 0,
+          "peak_score": 1.0,
+          "plateau_layer": 0
+        },
+        "Named Entity Recognition": {
+          "dimension": "entity",
+          "metric_name": "Accuracy",
+          "scores_per_layer": [
+            0.875,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "peak_layer": 1,
+          "peak_score": 1.0,
+          "plateau_layer": 1
+        },
+        "Topic Classification": {
+          "dimension": "semantic",
+          "metric_name": "Macro F1",
+          "scores_per_layer": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "peak_layer": 0,
+          "peak_score": 1.0,
+          "plateau_layer": 0
+        },
+        "STS Benchmark": {
+          "dimension": "sentence_semantics",
+          "metric_name": "Spearman rho",
+          "scores_per_layer": [
+            0.8890037323074621,
+            0.8590605171658633,
+            0.8735158624066351,
+            0.9075891761884541,
+            0.880743535027021,
+            0.8776459610468555,
+            0.831182351344375,
+            0.8425401226049813,
+            0.8270522527041546,
+            0.8487352705653123,
+            0.8125969074633828,
+            0.806401759503052,
+            0.806401759503052
+          ],
+          "peak_layer": 3,
+          "peak_score": 0.9075891761884541,
+          "plateau_layer": 0
+        }
+      },
+      "probing_vs_geometry_comparison": {
+        "sod_marker": 2,
+        "cka_elbow_marker": 1,
+        "max_drift_marker": 1,
+        "average_probe_plateau": 0.25,
+        "mae_sod_vs_probes": 1.75,
+        "mae_cka_vs_probes": 0.75,
+        "mae_drift_vs_probes": 0.75,
+        "detailed_comparisons": [
+          {
+            "task": "Part-of-Speech Tagging",
+            "dimension": "syntactic",
+            "probe_peak_layer": 0,
+            "probe_plateau_layer": 0,
+            "sod_layer": 2,
+            "delta_sod": -2,
+            "cka_elbow_layer": 1,
+            "delta_cka": -1,
+            "max_drift_layer": 1,
+            "delta_drift": -1
+          },
+          {
+            "task": "Named Entity Recognition",
+            "dimension": "entity",
+            "probe_peak_layer": 1,
+            "probe_plateau_layer": 1,
+            "sod_layer": 2,
+            "delta_sod": -1,
+            "cka_elbow_layer": 1,
+            "delta_cka": 0,
+            "max_drift_layer": 1,
+            "delta_drift": 0
+          },
+          {
+            "task": "Topic Classification",
+            "dimension": "semantic",
+            "probe_peak_layer": 0,
+            "probe_plateau_layer": 0,
+            "sod_layer": 2,
+            "delta_sod": -2,
+            "cka_elbow_layer": 1,
+            "delta_cka": -1,
+            "max_drift_layer": 1,
+            "delta_drift": -1
+          },
+          {
+            "task": "STS Benchmark",
+            "dimension": "sentence_semantics",
+            "probe_peak_layer": 3,
+            "probe_plateau_layer": 0,
+            "sod_layer": 2,
+            "delta_sod": -2,
+            "cka_elbow_layer": 1,
+            "delta_cka": -1,
+            "max_drift_layer": 1,
+            "delta_drift": -1
+          }
+        ]
+      }
+    },
+    "gpt2": {
+      "model_name": "gpt2",
+      "n_layers": 12,
+      "avg_anisotropy": 0.7796242099541885,
+      "min_anisotropy_layer": 10,
+      "max_mev_layer": 12,
+      "max_svd_ratio_layer": 0,
+      "sod_layer": 1,
+      "cka_elbow_layer": 2,
+      "max_drift_layer": 1,
+      "metrics": {
+        "anisotropy_per_layer": [
+          0.9991954565048218,
+          0.985900342464447,
+          0.9743489623069763,
+          0.9522680640220642,
+          0.9066489934921265,
+          0.8381258249282837,
+          0.7719871997833252,
+          0.7014220952987671,
+          0.6318721771240234,
+          0.565144956111908,
+          0.5520764589309692,
+          0.6146173477172852,
+          0.6415068507194519
+        ],
+        "uncentered_svd_ratio_per_layer": [
+          0.9992167026518936,
+          0.9862020572467619,
+          0.9752468891686171,
+          0.9538735773581284,
+          0.9086639972800767,
+          0.8425414791777452,
+          0.7785502895671185,
+          0.7132451752271494,
+          0.6570095257257592,
+          0.5815411499995363,
+          0.5678714156204995,
+          0.6261823305123897,
+          0.9120952389094704
+        ],
+        "mev_per_layer": [
+          0.8669086694717407,
+          0.2563358247280121,
+          0.28214719891548157,
+          0.33296623826026917,
+          0.2701936662197113,
+          0.2055853009223938,
+          0.1964268684387207,
+          0.1920638084411621,
+          0.19076329469680786,
+          0.22690993547439575,
+          0.22184717655181885,
+          0.17318283021450043,
+          0.8949784636497498
+        ],
+        "layer_drift_cosine": [
+          0.8630934357643127,
+          0.03308933973312378,
+          0.04214555025100708,
+          0.04713994264602661,
+          0.0613781213760376,
+          0.09804952144622803,
+          0.16294491291046143,
+          0.12733936309814453,
+          0.09158295392990112,
+          0.10722988843917847,
+          0.10245335102081299,
+          0.6680101156234741
+        ],
+        "layer_drift_cka": [
+          0.26577070355415344,
+          0.850686252117157,
+          0.9452245235443115,
+          0.9404308199882507,
+          0.9405911564826965,
+          0.9439147710800171,
+          0.9262392520904541,
+          0.95400470495224,
+          0.9690353870391846,
+          0.9785803556442261,
+          0.966756284236908,
+          0.37888219952583313
+        ],
+        "self_similarity_per_layer": [
+          0.954354484875997,
+          0.9354084134101868,
+          0.9096331397692362,
+          0.8630601565043131,
+          0.8201162616411845,
+          0.7428778211275736,
+          0.690884550412496,
+          0.6147870024045309,
+          0.5652885536352793,
+          0.5236320197582245,
+          0.5397263765335083,
+          0.6146272222201029,
+          0.8333772222201029
+        ],
+        "silhouette_per_layer": [
+          0.2696625292301178,
+          0.23294448852539062,
+          0.23499532043933868,
+          0.16743068397045135,
+          0.1468343287706375,
+          0.11500581353902817,
+          0.0879773497581482,
+          0.06929238885641098,
+          0.04001278430223465,
+          0.03623196482658386,
+          0.03927477449178696,
+          0.05146448686718941,
+          -0.22472763061523438
+        ]
+      },
+      "sod_sensitivity": {
+        "window_1": {
+          "thresh_0.20": 1,
+          "thresh_0.35": 1,
+          "thresh_0.50": 1,
+          "thresh_0.65": 1,
+          "thresh_0.80": 1,
+          "thresh_0.95": 1
+        },
+        "window_2": {
+          "thresh_0.20": 1,
+          "thresh_0.35": 1,
+          "thresh_0.50": 1,
+          "thresh_0.65": 1,
+          "thresh_0.80": 1,
+          "thresh_0.95": 1
+        },
+        "window_3": {
+          "thresh_0.20": -1,
+          "thresh_0.35": 1,
+          "thresh_0.50": 1,
+          "thresh_0.65": 1,
+          "thresh_0.80": 1,
+          "thresh_0.95": 1
+        }
+      },
+      "probing": {
+        "Part-of-Speech Tagging": {
+          "dimension": "syntactic",
+          "metric_name": "Accuracy",
+          "scores_per_layer": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "peak_layer": 0,
+          "peak_score": 1.0,
+          "plateau_layer": 0
+        },
+        "Named Entity Recognition": {
+          "dimension": "entity",
+          "metric_name": "Accuracy",
+          "scores_per_layer": [
+            0.875,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "peak_layer": 1,
+          "peak_score": 1.0,
+          "plateau_layer": 1
+        },
+        "Topic Classification": {
+          "dimension": "semantic",
+          "metric_name": "Macro F1",
+          "scores_per_layer": [
+            0.6517857142857143,
+            1.0,
+            1.0,
+            0.9142857142857143,
+            0.9142857142857143,
+            0.8285714285714286,
+            0.7267857142857143,
+            0.8285714285714286,
+            0.7267857142857143,
+            0.7541666666666668,
+            0.8285714285714286,
+            0.9142857142857143,
+            0.9142857142857143
+          ],
+          "peak_layer": 1,
+          "peak_score": 1.0,
+          "plateau_layer": 1
+        },
+        "STS Benchmark": {
+          "dimension": "sentence_semantics",
+          "metric_name": "Spearman rho",
+          "scores_per_layer": [
+            0.20454545454545453,
+            0.8012391362027764,
+            0.7155395894182012,
+            0.6319050919537361,
+            0.681466275636382,
+            0.6112545987526335,
+            0.6215798453531849,
+            0.6618483070953346,
+            0.6535881098148937,
+            0.6794012263162718,
+            0.7485803785399652,
+            0.7516779525201304,
+            0.10118741668540218
+          ],
+          "peak_layer": 1,
+          "peak_score": 0.8012391362027764,
+          "plateau_layer": 1
+        }
+      },
+      "probing_vs_geometry_comparison": {
+        "sod_marker": 1,
+        "cka_elbow_marker": 2,
+        "max_drift_marker": 1,
+        "average_probe_plateau": 0.75,
+        "mae_sod_vs_probes": 0.25,
+        "mae_cka_vs_probes": 1.25,
+        "mae_drift_vs_probes": 0.25,
+        "detailed_comparisons": [
+          {
+            "task": "Part-of-Speech Tagging",
+            "dimension": "syntactic",
+            "probe_peak_layer": 0,
+            "probe_plateau_layer": 0,
+            "sod_layer": 1,
+            "delta_sod": -1,
+            "cka_elbow_layer": 2,
+            "delta_cka": -2,
+            "max_drift_layer": 1,
+            "delta_drift": -1
+          },
+          {
+            "task": "Named Entity Recognition",
+            "dimension": "entity",
+            "probe_peak_layer": 1,
+            "probe_plateau_layer": 1,
+            "sod_layer": 1,
+            "delta_sod": 0,
+            "cka_elbow_layer": 2,
+            "delta_cka": -1,
+            "max_drift_layer": 1,
+            "delta_drift": 0
+          },
+          {
+            "task": "Topic Classification",
+            "dimension": "semantic",
+            "probe_peak_layer": 1,
+            "probe_plateau_layer": 1,
+            "sod_layer": 1,
+            "delta_sod": 0,
+            "cka_elbow_layer": 2,
+            "delta_cka": -1,
+            "max_drift_layer": 1,
+            "delta_drift": 0
+          },
+          {
+            "task": "STS Benchmark",
+            "dimension": "sentence_semantics",
+            "probe_peak_layer": 1,
+            "probe_plateau_layer": 1,
+            "sod_layer": 1,
+            "delta_sod": 0,
+            "cka_elbow_layer": 2,
+            "delta_cka": -1,
+            "max_drift_layer": 1,
+            "delta_drift": 0
+          }
+        ]
+      }
+    },
+    "distilgpt2": {
+      "model_name": "distilgpt2",
+      "n_layers": 6,
+      "avg_anisotropy": 0.8007439885820661,
+      "min_anisotropy_layer": 6,
+      "max_mev_layer": 0,
+      "max_svd_ratio_layer": 0,
+      "sod_layer": 1,
+      "cka_elbow_layer": 2,
+      "max_drift_layer": 1,
+      "metrics": {
+        "anisotropy_per_layer": [
+          0.9992178082466125,
+          0.9707536101341248,
+          0.9234409332275391,
+          0.8466469645500183,
+          0.7692841291427612,
+          0.7390827536582947,
+          0.3567817211151123
+        ],
+        "uncentered_svd_ratio_per_layer": [
+          0.9992384061297207,
+          0.971400492032964,
+          0.9252790338013527,
+          0.8512381382191513,
+          0.7815947092098711,
+          0.7427199768088273,
+          0.7941645750786029
+        ],
+        "mev_per_layer": [
+          0.8669087290763855,
+          0.29933980107307434,
+          0.27862057089805603,
+          0.2957404553890228,
+          0.2894855737686157,
+          0.30123552680015564,
+          0.8374834060668945
+        ],
+        "layer_drift_cosine": [
+          0.8395951986312866,
+          0.0668250322341919,
+          0.08551275730133057,
+          0.20354807376861572,
+          0.1419363021850586,
+          0.6273524761199951
+        ],
+        "layer_drift_cka": [
+          0.2359044849872589,
+          0.9116377830505371,
+          0.9004276990890503,
+          0.9476503133773804,
+          0.9058732390403748,
+          0.4441975951194763
+        ],
+        "self_similarity_per_layer": [
+          0.9533692995707194,
+          0.9201574325561523,
+          0.8673244516054789,
+          0.7908184925715128,
+          0.7122430602709452,
+          0.6816379427909851,
+          0.7378889123598734
+        ],
+        "silhouette_per_layer": [
+          0.26955679059028625,
+          0.27030155062675476,
+          0.24997873604297638,
+          0.14626875519752502,
+          0.09596024453639984,
+          0.08999869972467422,
+          -0.13023501634597778
+        ]
+      },
+      "sod_sensitivity": {
+        "window_1": {
+          "thresh_0.20": 1,
+          "thresh_0.35": 1,
+          "thresh_0.50": 1,
+          "thresh_0.65": 1,
+          "thresh_0.80": 1,
+          "thresh_0.95": 1
+        },
+        "window_2": {
+          "thresh_0.20": 1,
+          "thresh_0.35": 1,
+          "thresh_0.50": 1,
+          "thresh_0.65": 1,
+          "thresh_0.80": 1,
+          "thresh_0.95": 1
+        },
+        "window_3": {
+          "thresh_0.20": -1,
+          "thresh_0.35": 1,
+          "thresh_0.50": 1,
+          "thresh_0.65": 1,
+          "thresh_0.80": 1,
+          "thresh_0.95": 1
+        }
+      },
+      "probing": {
+        "Part-of-Speech Tagging": {
+          "dimension": "syntactic",
+          "metric_name": "Accuracy",
+          "scores_per_layer": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "peak_layer": 0,
+          "peak_score": 1.0,
+          "plateau_layer": 0
+        },
+        "Named Entity Recognition": {
+          "dimension": "entity",
+          "metric_name": "Accuracy",
+          "scores_per_layer": [
+            0.875,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "peak_layer": 1,
+          "peak_score": 1.0,
+          "plateau_layer": 1
+        },
+        "Topic Classification": {
+          "dimension": "semantic",
+          "metric_name": "Macro F1",
+          "scores_per_layer": [
+            0.6517857142857143,
+            0.9142857142857143,
+            0.9142857142857143,
+            0.9142857142857143,
+            0.7541666666666668,
+            0.7541666666666668,
+            0.9142857142857143
+          ],
+          "peak_layer": 1,
+          "peak_score": 0.9142857142857143,
+          "plateau_layer": 1
+        },
+        "STS Benchmark": {
+          "dimension": "sentence_semantics",
+          "metric_name": "Spearman rho",
+          "scores_per_layer": [
+            0.20454545454545453,
+            0.8982964542479581,
+            0.8012391362027764,
+            0.7176046387383114,
+            0.6122871234126888,
+            0.6577182084551142,
+            0.11770781124628417
+          ],
+          "peak_layer": 1,
+          "peak_score": 0.8982964542479581,
+          "plateau_layer": 1
+        }
+      },
+      "probing_vs_geometry_comparison": {
+        "sod_marker": 1,
+        "cka_elbow_marker": 2,
+        "max_drift_marker": 1,
+        "average_probe_plateau": 0.75,
+        "mae_sod_vs_probes": 0.25,
+        "mae_cka_vs_probes": 1.25,
+        "mae_drift_vs_probes": 0.25,
+        "detailed_comparisons": [
+          {
+            "task": "Part-of-Speech Tagging",
+            "dimension": "syntactic",
+            "probe_peak_layer": 0,
+            "probe_plateau_layer": 0,
+            "sod_layer": 1,
+            "delta_sod": -1,
+            "cka_elbow_layer": 2,
+            "delta_cka": -2,
+            "max_drift_layer": 1,
+            "delta_drift": -1
+          },
+          {
+            "task": "Named Entity Recognition",
+            "dimension": "entity",
+            "probe_peak_layer": 1,
+            "probe_plateau_layer": 1,
+            "sod_layer": 1,
+            "delta_sod": 0,
+            "cka_elbow_layer": 2,
+            "delta_cka": -1,
+            "max_drift_layer": 1,
+            "delta_drift": 0
+          },
+          {
+            "task": "Topic Classification",
+            "dimension": "semantic",
+            "probe_peak_layer": 1,
+            "probe_plateau_layer": 1,
+            "sod_layer": 1,
+            "delta_sod": 0,
+            "cka_elbow_layer": 2,
+            "delta_cka": -1,
+            "max_drift_layer": 1,
+            "delta_drift": 0
+          },
+          {
+            "task": "STS Benchmark",
+            "dimension": "sentence_semantics",
+            "probe_peak_layer": 1,
+            "probe_plateau_layer": 1,
+            "sod_layer": 1,
+            "delta_sod": 0,
+            "cka_elbow_layer": 2,
+            "delta_cka": -1,
+            "max_drift_layer": 1,
+            "delta_drift": 0
+          }
+        ]
+      }
+    }
+  }
+}

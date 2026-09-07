@@ -1,0 +1,39 @@
+site_name: repr-audit
+site_description: Audit transformer representation geometry — anisotropy, self-similarity, and semantic onset depth.
+site_url: https://meryambn.github.io/repr-audit
+repo_url: https://github.com/meryambn/repr-audit
+repo_name: repr-audit
+
+theme:
+  name: material
+  palette:
+    scheme: slate
+    primary: indigo
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - content.code.copy
+
+plugins:
+  - search
+  - mkdocstrings:
+      handlers:
+        python:
+          paths: [src]
+          options:
+            show_source: true
+            show_root_heading: true
+
+nav:
+  - Home: index.md
+  - API Reference:
+      - RepresentationAuditor: api/auditor.md
+      - HiddenStateExtractor: api/extractor.md
+      - Metrics: api/metrics.md
+      - AuditResults: api/results.md
+      - Plotting: api/plotting.md
+
+markdown_extensions:
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - admonition
